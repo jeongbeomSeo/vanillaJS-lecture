@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Parcel Sandbox</title>
+    <meta charset="UTF-8" />
+  </head>
+
+  <body>
+    <div>
+      <!--NO Touch-->
+      <h1>Random Number Game</h1>
+    </div>
+
+    <div id="range-text">
+      <h3>Generate a number between 0 and 10</h3>
+      <!--초기 새로고침 했을때 js로 어떻게 처음부터 구현하는지 모르겟음 
+      addEventListenter 로하면 range가 변화하고 나서부터 적용된다.-->
+    </div>
+
+    <form id="guess-number">
+      <input
+        type="range"
+        id="range-bar"
+        min="0"
+        max="200"
+        step="5"
+        value="10"
+      /><br />
+      <span>Guess the number:</span><input type="number" id="number" />
+      <input type="button" value="Play!" id="submit" />
+      <!--type = "submit"으로 할경우 페이지 이동이 불가피!!-->
+    </form>
+
+    <!-- Create random number and Substitute this number with computer-number-->
+    <div id="result-text">
+      <span></span>
+      <h4></h4>
+    </div>
+
+    <script src="./index.js"></script>
+  </body>
+</html>
