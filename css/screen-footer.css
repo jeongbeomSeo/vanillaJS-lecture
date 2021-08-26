@@ -1,0 +1,19 @@
+.momentum-footer {
+  position: absolute;
+  height: 70px;
+  bottom: 0;
+  width: 100%;
+  padding: 0 20px;
+}
+
+.footer__columns {
+  display: flex;
+  align-items: center;
+
+  justify-content: space-between;
+}
+
+.footer__column:nth-child(2) {
+  display: flex;
+  flex-direction: column;
+}

@@ -4,28 +4,100 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Toy Project-Momentum Clone coding</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
     <link rel="stylesheet" href="./css/style.css" />
-    <title>Momemtum App</title>
   </head>
   <body>
-    <h2 id="clock"></h2>
-    <form action="#" c lass="hidden" id="login-form">
-      <input
-        type="text"
-        maxlength="15"
-        placeholder="What is your name?"
-        required
-      />
-      <input type="submit" value="Log In" />
-    </form>
-    <h1 id="greeting" class="hidden"></h1>
-    <div id="quote">
-      <span></span>
-      <span></span>
-    </div>
-    <script src="./js/greetings.js"></script>
-    <script src="./js/clock.js"></script>
-    <script src="./js/quotes.js"></script>
-    <script src="./js/background.js"></script>
+    <header class="momentum-header">
+      <div class="header-link">
+        <span>Links</span>
+        <form action="#" class="header-link__serch">
+          <i class="fas fa-search"></i>
+          <input type="text" />
+        </form>
+      </div>
+      <div class="weather">
+        <div class="temp">
+          <i class="fas fa-temperature-high"></i>
+          <span class="temperture"></span>
+        </div>
+        <span class="location"></span>
+      </div>
+    </header>
+    <main class="momentum-main">
+      <div class="main-container">
+        <div class="container-top">
+          <div class="container__clock">
+            <i class="far fa-clock"></i>
+            <span></span>
+          </div>
+          <div class="container__greeting">
+            <form action="" class="greeting__form">
+              <input
+                type="text"
+                class="greeting__input-text"
+                placeholder="Write your name"
+                required
+              />
+            </form>
+          </div>
+        </div>
+
+        <div class="container-bottom">
+          <div class="container__notification">
+            <form action="" class="notification__form">
+              <span>What is your main focus for today?</span>
+              <input type="text" />
+            </form>
+            <div class="notification">
+              <span class="notification__day">Today</span>
+              <div class="notification__task">
+                <span class="notification__message">message</span>
+                <div class="notification__option">
+                  <i class="fas fa-ellipsis-h"></i>
+                  <div class="option__clear">
+                    <span>X</span>
+                    <span>clear</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="momentum-footer">
+      <div class="footer__columns">
+        <div class="footer__column">
+          <i class="fas fa-cog"></i>
+          <span class="location"></span>
+        </div>
+        <div class="footer__column">
+          <span class="quote">asd</span>
+          <span class="author">asd</span>
+        </div>
+        <div class="footer__column">
+          <span class="footer__todoList">Todo</span>
+          <div class="todoList">
+            <div class="todoList__header"></div>
+            <div class="todoLsit__main">
+              <li class="todoList__list"></li>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
   </body>
+  <!-- <script src="./js/bg.js"></script> -->
+  <script src="./js/serch.js"></script>
+  <script src="./js/weather.js"></script>
+  <script src="./js/container-clock.js"></script>
+  <script src="./js/container-greeting.js"></script>
+  <script src="./js/notification.js"></script>
+  <script src="./js/checkbox-line.js"></script>
 </html>
