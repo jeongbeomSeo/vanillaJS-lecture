@@ -94,28 +94,36 @@
 }
 
 .notification__form {
-  display: flex;
+  display: none;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .notification__form span {
+  display: block;
   color: white;
   font-size: 35px;
+  width: 800px;
 }
 
 .notification__form input {
   border: none;
   outline: none;
   border-bottom: 1px solid white;
+  width: 500px;
   font-size: 25px;
   padding: 10px 0;
   color: white;
   text-align: center;
+  background: none;
 }
 
 .notification {
-  display: flex;
+  display: none;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .notification__day {
@@ -231,9 +239,31 @@ Making checkbox method number 2
 }
 
 .option__clear {
-  display: flex;
+  color: black;
   position: absolute;
-  padding: 10px;
-  top: 40px;
-  background: white;
+  width: 100px;
+  padding: 18px;
+  top: 30px;
+  left: 20px;
+  background-color: #f1f1f1;
+  border-radius: 10px;
+  box-shadow: -2px 2px 10px 1px rgba(0, 0, 0, 0.2);
+  border-top-left-radius: 0;
+  height: 0;
+  display: none;
+  transition: 0.4s linears;
+  justify-content: center;
+  align-items: center;
+}
+
+.active {
+  display: flex;
+}
+
+.option__clear span {
+  display: inline;
+}
+
+.option__clear span:first-child {
+  margin-right: 10px;
 }

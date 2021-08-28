@@ -9,11 +9,150 @@
 .footer__columns {
   display: flex;
   align-items: center;
-
   justify-content: space-between;
 }
 
+.footer__column:first-child {
+  font-size: 20px;
+  color: #f1f1f188;
+}
+
+@keyframes infiniteRotate {
+  0% {
+    transform: none;
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.footer__column:first-child:hover i {
+  animation: infiniteRotate 1s linear infinite;
+}
+
 .footer__column:nth-child(2) {
+  font-size: 20px;
+  color: white;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer__coulumn:last-child {
+  position: relative;
+}
+
+.footer__todoList {
+  color: white;
+  font-size: 20px;
+}
+
+.todoList {
+  display: none;
+  flex-direction: column;
+  width: 300px;
+  height: 250px;
+  background-color: white;
+  position: absolute;
+  bottom: 70px;
+  right: 30px;
+  padding: 20px;
+  border-radius: 10px;
+  border-bottom-right-radius: 0;
+}
+
+.todoList__main {
+  height: 100%;
+  position: relative;
+  /* 이런 방식을 사용함으로써 나중에 todoList의 height를 조정하면 알아서 높이가 맞춰질거임ㄴ */
+}
+
+.todoList__header {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.todoList__header span {
+  color: black;
+  font-size: 20px;
+  font-weight: 600;
+  margin-right: 10px;
+}
+
+.todoList__header .fa-chevron-down {
+  color: rgba(0, 0, 0, 0.4);
+  font-size: 13px;
+}
+
+.todoList .fa-ellipsis-h {
+  padding: 6px;
+  float: right;
+  /* display같은것 안쓰고 오른쪽으로 붙이고 싶을 때 사용 */
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 14px;
+  position: relative;
+}
+
+.todoList .fa-ellipsis-h:hover {
+  border-radius: 50%;
+  background-color: #f1f2f6;
+}
+
+.delete-box {
+  display: none;
+  position: absolute;
+  bottom: 26px;
+  right: 10px;
+  width: 120px;
+  height: 25px;
+  background-color: #ced6e0;
+  border-radius: 7px;
+  border-bottom-right-radius: 0;
+  padding: 5px 8px;
+}
+
+.delete-box span {
+  font-size: 16px;
+  padding-right: 10px;
+}
+
+.todoList__list {
+  text-decoration: none;
+  list-style: none;
+}
+
+.todoList__list li {
+  margin-bottom: 3px;
+}
+
+.todoList__list li:hover i {
+  border-radius: 50%;
+  background-color: #f1f2f6;
+}
+
+.todoList__list input[type="checkbox"]:checked + span {
+  text-decoration: line-through;
+  color: rgba(0, 0, 0, 0.4);
+}
+.todoList__list span {
+  margin-left: 3px;
+}
+
+.todoList__input {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  border: none;
+  outline: none;
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 16px;
+}
+
+.todoList__input::placeholder {
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.active {
+  display: flex;
 }

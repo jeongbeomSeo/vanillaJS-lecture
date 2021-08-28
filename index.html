@@ -56,7 +56,11 @@
             <div class="notification">
               <span class="notification__day">Today</span>
               <div class="notification__task">
-                <span class="notification__message">message</span>
+                <label class="checkbox">
+                  <input type="checkbox" />
+                  <span></span>
+                </label>
+                <span class="notification__message"></span>
                 <div class="notification__option">
                   <i class="fas fa-ellipsis-h"></i>
                   <div class="option__clear">
@@ -84,20 +88,38 @@
         <div class="footer__column">
           <span class="footer__todoList">Todo</span>
           <div class="todoList">
-            <div class="todoList__header"></div>
-            <div class="todoLsit__main">
-              <li class="todoList__list"></li>
+            <div class="todoList__header">
+              <span>Today</span>
+              <i class="fas fa-chevron-down"></i>
+              <i class="fas fa-ellipsis-h">
+                <div class="delete-box">
+                  <i class="fas fa-eraser"></i>
+                  <span>clear all</span>
+                </div>
+              </i>
+            </div>
+            <div class="todoList__main">
+              <ul class="todoList__list">
+                <li><input type="checkbox" /> <span>localhost</span></li>
+                <li><input type="checkbox" /> <span>localhost</span></li>
+              </ul>
+              <input
+                type="text"
+                class="todoList__input"
+                placeholder="New Todo"
+              />
             </div>
           </div>
         </div>
       </div>
     </footer>
   </body>
-  <!-- <script src="./js/bg.js"></script> -->
+  <script src="./js/bg.js"></script>
   <script src="./js/serch.js"></script>
   <script src="./js/weather.js"></script>
   <script src="./js/container-clock.js"></script>
   <script src="./js/container-greeting.js"></script>
-  <script src="./js/notification.js"></script>
-  <script src="./js/checkbox-line.js"></script>
+  <script src="./js/notification-display.js"></script>
+  <script src="./js/quote-list.js"></script>
+  <script src="./js/todoList.js"></script>
 </html>
